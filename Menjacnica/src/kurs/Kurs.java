@@ -37,7 +37,7 @@ public class Kurs {
 		return srednji;
 	}
 
-	public void setSrednji(double srednji) throws Exception {
+	public void setSrednji() throws Exception {
 		if (kupovni > 0 && prodajni > 0) {
 			this.srednji = (kupovni + prodajni) / 2;
 		} else {
