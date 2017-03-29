@@ -14,24 +14,36 @@ public class Valuta {
 		return naziv;
 	}
 
-	public void setNaziv(String naziv) {
-		this.naziv = naziv;
+	public void setNaziv(String naziv) throws Exception {
+		if (naziv != null && !naziv.isEmpty()) {
+			this.naziv = naziv;
+		} else {
+			throw new Exception("Los unos naziva");
+		}
 	}
 
 	public String getSkraceniNaziv() {
 		return skraceniNaziv;
 	}
 
-	public void setSkraceniNaziv(String skraceniNaziv) {
-		this.skraceniNaziv = skraceniNaziv;
+	public void setSkraceniNaziv(String skraceniNaziv) throws Exception {
+		if (skraceniNaziv != null && !skraceniNaziv.isEmpty()) {
+			this.skraceniNaziv = skraceniNaziv;
+		} else {
+			throw new Exception("Los unos skracenog naziva");
+		}
 	}
 
 	public LinkedList<Kurs> getKursevi() {
 		return kursevi;
 	}
 
-	public void setKursevi(LinkedList<Kurs> kursevi) {
-		this.kursevi = kursevi;
+	public void setKursevi(LinkedList<Kurs> kursevi) throws Exception {
+		if (kursevi != null) {
+			this.kursevi = kursevi;
+		} else {
+			throw new Exception("Lose uneti kursevi");
+		}
 	}
 
 	@Override
